@@ -1,8 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
+:root {
+    --bg-primary: #F63245;
+    --bg-dark: #202020;
+    --bg-light: #FFFFFF;
+}
+
 body {
     margin: 0;
     font-family: 'Lato', sans-serif;
+    transition: 500ms;
+}
+
+body.dark-mode {
+    background-color: var(--bg-dark);
 }
 
 .nav {
@@ -17,12 +28,25 @@ body {
 }
 
 .nav-item a {
-    color: #202020;
+    color: var(--bg-dark);
     text-decoration: none;
     text-transform: uppercase;
     font-size: .9em;
     font-weight: bold;
     letter-spacing: 1px;
+    transition: 200ms;
+}
+
+.nav-item a:hover {
+    color: var(--bg-primary);
+}
+
+body.dark-mode .nav-item a {
+    color: var(--bg-light);
+}
+
+body.dark-mode .nav-item a:hover {
+    color: var(--bg-primary);
 }
 
 main {
@@ -37,9 +61,14 @@ main {
     width: 425px;
     border-radius: 10px;
     box-shadow: 0 0 16px #cccccc;
-    color: #202020;
-    background-color: #ffffff;
-    border: 1.5px solid #cccccc;
+    color: var(--bg-dark);
+    background-color: var(--bg-light);
+}
+
+body.dark-mode .card {
+    color: var(--bg-light);
+    box-shadow: 0 0 16px #474747;
+    background-color: var(--bg-dark);
 }
 
 .card-header {
@@ -74,8 +103,8 @@ main {
     height: 200px;
     width: 200px;
     border-radius: 50%;
-    border: 5px solid #E92538;
-    margin-top: 40px;
+    border: 6px solid var(--bg-primary);
+    margin-top: 50px;
 }
 
 .card-header > h1 {
@@ -89,7 +118,7 @@ main {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: bold;
-    color: #E92538;
+    color: var(--bg-primary);
 }
 
 .card-body > p {
@@ -99,25 +128,36 @@ main {
 
 .card-footer a {
     font-size: 1.8em;
-    color: #202020;
-    transition: 500ms;
+    color: var(--bg-dark);
+    transition: 200ms;
 }
 
 .card-footer a:hover {
-    color: #E92538;
+    color: var(--bg-primary);
 }
 
-.btn-outline {
-    width: 90%;
-    height: 35px;
+body.dark-mode .card-footer a {
+    color: var(--bg-light);
+}
+
+body.dark-mode .card-footer a:hover {
+    color: var(--bg-primary);
+}
+
+.btn-primary {
+    background-color: var(--bg-primary);
+    color: var(--bg-light);
+    padding: 8px 16px;
+    border: 1px solid var(--bg-primary);
     border-radius: 5px;
-    background-color: transparent;
     text-transform: uppercase;
-    transition: 800ms;
+    font-weight: bold;
+    font-size: .8em;
+    transition: 500ms;
 }
 
-.btn-outline:hover {
-    background-color: #E92538;
+.btn-primary:hover {
+    background-color: #df2e3f;
 }
 
 @media(max-width: 768px) {
@@ -134,15 +174,13 @@ main {
 
     .card-header > h1 {
         font-size: 1.4em;
-        text-transform: uppercase;
-        letter-spacing: 3px;
     }
 
     .card-footer a {
         font-size: 1.6em;
     }
 
-    .nav-item a {
+    .nav-item a, .btn-primary {
         font-size: .8em;
     }
 
