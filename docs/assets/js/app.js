@@ -1,22 +1,33 @@
 const body = document.querySelector('body');
 const mode = document.querySelector('#mode');
-// const configTheme = window.matchMedia('(prefers-color-scheme: dark)');
+const config = localStorage.getItem('theme');
 
-ScrollReveal().reveal('.nav', { delay: 1000 });
-ScrollReveal().reveal('.card', { delay: 2000 });
+window.addEventListener('DOMContentLoaded', () => {
+    
+    ScrollReveal().reveal('.nav', { delay: 1000 });
+    ScrollReveal().reveal('.card', { delay: 2000 });
+    
+    if (config === 'dark-mode') {
+        body.classList.toggle('dark-mode');
+        mode.innerHTML = 'Light Mode <i class="far fa-sun"></i>';
+    } else {
+        mode.innerHTML = 'Dark Mode <i class="far fa-moon"></i>';
+    }
+
+});
 
 mode.addEventListener('click', () => {
     
-    // if (configTheme.matches) {
-    //     document.body.classList.toggle('light-mode');
-    // }
-
+    let themeSelected;
     body.classList.toggle('dark-mode');
 
     if (body.classList.contains('dark-mode')) {
-        mode.innerHTML = '<i class="far fa-sun"></i> Light Mode';
+        mode.innerHTML = 'Light Mode <i class="far fa-sun"></i>';
+        themeSelected = body.classList.contains('') ? null : 'dark-mode';
     } else {
-        mode.innerHTML = '<i class="far fa-moon"></i> Dark Mode';
+        mode.innerHTML = 'Dark Mode <i class="far fa-moon"></i>';
     }
+
+    localStorage.setItem('theme', themeSelected);
 
 });

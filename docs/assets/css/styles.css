@@ -147,11 +147,10 @@ body.dark-mode .card-footer a:hover {
 .btn-primary {
     background-color: var(--bg-primary);
     color: var(--bg-light);
-    padding: 8px 16px;
+    padding: 8px 14px;
     border: 1px solid var(--bg-primary);
     border-radius: 5px;
-    text-transform: uppercase;
-    font-weight: bold;
+    letter-spacing: 1.5px;
     font-size: .8em;
     transition: 500ms;
 }
@@ -184,4 +183,17 @@ body.dark-mode .card-footer a:hover {
         font-size: .8em;
     }
 
+}
+
+@media(max-width: 376px) {
+    .card {
+        height: 525px;
+        width: 325px;
+    }
+
+    .user-image {
+        height: 150px;
+        width: 150px;
+        margin-top: 25px;
+    }
 }
