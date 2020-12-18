@@ -1,15 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 :root {
-    --bg-primary: #F63245;
-    --bg-dark: #202020;
+    /* Light Mode */
+    --light-primary: #F63245;
+    --light-secondary: #202020;
     --bg-light: #FFFFFF;
+
+    /* Dark Mode */
+    --dark-primary: #F34354;
+    --dark-secondary: #dbdbdb;
+    --bg-dark: #121212;
 }
 
 body {
     margin: 0;
     font-family: 'Lato', sans-serif;
-    transition: 500ms;
+    background-color: var(--bg-light);
+    transition: 400ms;
 }
 
 body.dark-mode {
@@ -28,7 +35,7 @@ body.dark-mode {
 }
 
 .nav-item a {
-    color: var(--bg-dark);
+    color: var(--light-secondary);
     text-decoration: none;
     text-transform: uppercase;
     font-size: .9em;
@@ -38,15 +45,15 @@ body.dark-mode {
 }
 
 .nav-item a:hover {
-    color: var(--bg-primary);
+    color: var(--light-primary);
 }
 
 body.dark-mode .nav-item a {
-    color: var(--bg-light);
+    color: var(--dark-secondary);
 }
 
 body.dark-mode .nav-item a:hover {
-    color: var(--bg-primary);
+    color: var(--dark-primary);
 }
 
 main {
@@ -61,14 +68,16 @@ main {
     width: 425px;
     border-radius: 10px;
     box-shadow: 0 0 16px #cccccc;
-    color: var(--bg-dark);
+    color: var(--light-secondary);
     background-color: var(--bg-light);
+    border: .5px solid #cccccc;
 }
 
 body.dark-mode .card {
-    color: var(--bg-light);
-    box-shadow: 0 0 16px #474747;
-    background-color: var(--bg-dark);
+    color: var(--dark-secondary);
+    box-shadow: none;
+    background-color: #212121;
+    border: none;
 }
 
 .card-header {
@@ -103,9 +112,14 @@ body.dark-mode .card {
     height: 200px;
     width: 200px;
     border-radius: 50%;
-    border: 6px solid var(--bg-primary);
+    border: 6px solid var(--light-primary);
     margin-top: 50px;
 }
+
+body.dark-mode .user-image {
+    filter: brightness(.8) contrast(1.2);
+    border: 6px solid var(--dark-primary);
+} 
 
 .card-header > h1 {
     font-size: 1.8em;
@@ -118,7 +132,11 @@ body.dark-mode .card {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: bold;
-    color: var(--bg-primary);
+    color: var(--light-primary);
+}
+
+body.dark-mode .card-header > p {
+    color: var(--dark-primary);
 }
 
 .card-body > p {
@@ -128,34 +146,40 @@ body.dark-mode .card {
 
 .card-footer a {
     font-size: 1.8em;
-    color: var(--bg-dark);
+    color: var(--light-secondary);
     transition: 200ms;
 }
 
 .card-footer a:hover {
-    color: var(--bg-primary);
+    color: var(--light-primary);
 }
 
 body.dark-mode .card-footer a {
-    color: var(--bg-light);
+    color: var(--dark-secondary);
 }
 
 body.dark-mode .card-footer a:hover {
-    color: var(--bg-primary);
+    color: var(--dark-primary);
 }
 
 .btn-primary {
-    background-color: var(--bg-primary);
+    background-color: var(--light-primary);
     color: var(--bg-light);
     padding: 8px 14px;
-    border: 1px solid var(--bg-primary);
+    border: .5px solid var(--light-primary);
     border-radius: 5px;
-    letter-spacing: 1.5px;
-    font-size: .8em;
-    transition: 500ms;
+    letter-spacing: 1px;
+    font-size: .9em;
+    transition: 200ms;
 }
 
-.btn-primary:hover {
+body.dark-mode .btn-primary {
+    background-color: var(--dark-primary);
+    color: var(--dark-secondary);
+    border: .5px solid var(--dark-primary);
+}
+
+.btn-primary:hover, body.dark-mode .btn-primary:hover {
     background-color: #df2e3f;
 }
 
