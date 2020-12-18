@@ -7,7 +7,7 @@
     --bg-light: #FFFFFF;
 
     /* Dark Mode */
-    --dark-primary: #F34354;
+    --dark-primary: #eb5362;
     --dark-secondary: #dbdbdb;
     --bg-dark: #121212;
 }
@@ -179,8 +179,12 @@ body.dark-mode .btn-primary {
     border: .5px solid var(--dark-primary);
 }
 
-.btn-primary:hover, body.dark-mode .btn-primary:hover {
+.btn-primary:hover {
     background-color: #df2e3f;
+}
+
+body.dark-mode .btn-primary:hover {
+    background-color: #b94551;
 }
 
 @media(max-width: 768px) {
