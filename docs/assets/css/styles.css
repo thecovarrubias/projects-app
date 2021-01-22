@@ -9,7 +9,7 @@
     /* Dark Mode */
     --dark-primary: #eb5362;
     --dark-secondary: #dbdbdb;
-    --bg-dark: #121212;
+    --bg-dark: #212121;
 }
 
 body {
@@ -24,7 +24,7 @@ body.dark-mode {
 }
 
 .nav {
-    height: 8vh;
+    height: 10vh;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -57,26 +57,25 @@ body.dark-mode .nav-item a:hover {
 }
 
 main {
-    height: 92vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 90vh;
 }
 
 .card {
     height: 625px;
     width: 425px;
     border-radius: 10px;
-    box-shadow: 0 0 16px #cccccc;
+    box-shadow: 0 0 25px #cccccc;
     color: var(--light-secondary);
     background-color: var(--bg-light);
-    border: .5px solid #cccccc;
 }
 
 body.dark-mode .card {
     color: var(--dark-secondary);
     box-shadow: none;
-    background-color: #212121;
+    background-color: #303030;
     border: none;
 }
 
@@ -171,6 +170,7 @@ body.dark-mode .card-footer a:hover {
     letter-spacing: 1px;
     font-size: .9em;
     transition: 200ms;
+    cursor: pointer;
 }
 
 body.dark-mode .btn-primary {
@@ -223,5 +223,15 @@ body.dark-mode .btn-primary:hover {
         height: 150px;
         width: 150px;
         margin-top: 25px;
+    }
+}
+
+@media(max-height: 426px) and (max-width: 660px) {
+    .nav {
+        height: 15vh;
+    }
+
+    main {
+        height: 135vh;
     }
 }
