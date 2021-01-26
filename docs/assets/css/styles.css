@@ -9,7 +9,7 @@
     /* Dark Mode */
     --dark-primary: #eb5362;
     --dark-secondary: #dbdbdb;
-    --bg-dark: #212121;
+    --bg-dark: #191919;
 }
 
 body {
@@ -66,15 +66,21 @@ main {
     height: 625px;
     width: 425px;
     border-radius: 10px;
-    box-shadow: 0 0 25px #cccccc;
     color: var(--light-secondary);
     background-color: var(--bg-light);
+    border: 1px solid #cccccc;
+    transition: 200ms;
+}
+
+.card:hover {
+    border: 1px solid #e4e4e4;
+    box-shadow: 0 0 35px #cccccc;
 }
 
 body.dark-mode .card {
     color: var(--dark-secondary);
     box-shadow: none;
-    background-color: #303030;
+    background-color: #282828;
     border: none;
 }
 
