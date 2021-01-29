@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frontend Developer - Jose Covarrubias</title>
+    <title>Frontend Developer</title>
     <meta name="description" content="I’m Frontend Developer with more than one year of experience, interested in learning new technologies, in addition to contributing new and innovative ideas.">
     <meta name="keywords" content="developer, frontend developer, innovative ideas, technology">
     <meta name="author" content="Jose Covarrubias">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏃🏽‍♂️</text></svg>">
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="https://kit.fontawesome.com/2c5123bfbe.js" crossorigin="anonymous"></script>
@@ -15,20 +16,20 @@
     
     <nav>
         <ul class="nav">
-            <li class="nav-item"><a href="#">Contact</a></li>
-            <li class="nav-item"><button class="btn-primary" id="mode"></button></li>
+            <li class="nav-item"><a href="#contact">Contact</a></li>
+            <li class="nav-item"><a href="#mode" id="mode"></a></li>
         </ul>
     </nav>
 
-    <main>
+    <main id="contact">
         <article class="card">
             <div class="card-header">
                 <img class="user-image" src="assets/img/68752582_2407937512817951_8711137963502731264_n.jpg" alt="img">
-                <h1>Jose Covarrubias</h1>
+                <h1>José Covarrubias</h1>
                 <p>Frontend Developer</p>
             </div>
             <div class="card-body">
-                <p>I’m Frontend Developer with more than one year of experience, interested in learning new technologies, in addition to contributing new and innovative ideas.</p>
+                <p>Hi, I’m developer with more than one year of experience, interested in learning new technologies, in addition to contributing new and innovative ideas.</p>
             </div>
             <div class="card-footer">
                 <a href="https://github.com/thecovarrubias" rel="noopener" target="_blank"><i class="fab fa-github"></i></a>
@@ -37,6 +38,10 @@
             </div>
         </article>
     </main>
+
+    <footer>
+        <p>Designed & Built by José Covarrubias &copy; <span id="year"></span></p>
+    </footer>
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="assets/js/app.js"></script>

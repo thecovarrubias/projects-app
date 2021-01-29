@@ -1,11 +1,11 @@
 const body = document.querySelector('body');
 const mode = document.querySelector('#mode');
 const config = localStorage.getItem('theme');
+const year = document.querySelector('#year');
 
 window.addEventListener('DOMContentLoaded', () => {
-    
-    ScrollReveal().reveal('.nav', { delay: 1000 });
-    ScrollReveal().reveal('.card', { delay: 2000 });
+
+    year.innerHTML =  new Date().getFullYear();
     
     if (config === 'dark-mode') {
         body.classList.toggle('dark-mode');
