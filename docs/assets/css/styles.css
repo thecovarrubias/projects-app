@@ -150,9 +150,20 @@ body.dark-mode .card-header > p {
 }
 
 .card-footer a {
-    font-size: 1.9em;
+    text-decoration: none;
     color: var(--light-secondary);
+}
+
+.card-footer a i {
+    font-size: 1.9em;
     transition: 200ms;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-footer a span {
+    font-size: .8em;
+    font-weight: bold;
 }
 
 .card-footer a:hover {
@@ -212,8 +223,12 @@ body.dark-mode footer > p {
         font-size: .9em;
     }
 
-    .card-footer a {
+    .card-footer a i {
         font-size: 1.7em;
+    }
+    
+    .card-footer a span {
+        font-size: .7em;
     }
 
     .nav-item a, footer > p {
