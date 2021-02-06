@@ -12,6 +12,10 @@
     --bg-dark: #191919;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: 'Lato', sans-serif;
@@ -24,7 +28,7 @@ body.dark-mode {
 }
 
 .nav {
-    height: 8vh;
+    height: 10vh;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -60,7 +64,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 85vh;
+    height: 90vh;
 }
 
 .card {
@@ -155,7 +159,7 @@ body.dark-mode .card-header > p {
 }
 
 .card-footer a i {
-    font-size: 1.9em;
+    font-size: 1.8em;
     transition: 200ms;
     display: flex;
     flex-direction: column;
@@ -178,12 +182,15 @@ body.dark-mode .card-footer a:hover {
     color: var(--dark-primary);
 }
 
+section {
+    height: 94vh;
+}
+
 footer {
     bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
     width: 100%;
     height: 6vh;
     background-color: var(--light-primary);
@@ -203,7 +210,34 @@ body.dark-mode footer > p {
     color: var(--dark-secondary);
 }
 
-@media(max-width: 768px) {
+.top-bottom {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background-color: var(--light-primary);
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    border: 1px solid var(--bg-light);
+    color: var(--bg-light);
+}
+
+.top-bottom > i {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+}
+
+body.dark-mode .top-bottom {
+    background-color: var(--dark-primary);
+    border-color: var(--light-secondary);
+}
+
+@media(max-width: 1025px) {
     
     .card {
         height: 500px;
@@ -224,11 +258,11 @@ body.dark-mode footer > p {
     }
 
     .card-footer a i {
-        font-size: 1.7em;
+        font-size: 1.6em;
     }
     
     .card-footer a span {
-        font-size: .7em;
+        font-size: .6em;
     }
 
     .nav-item a, footer > p {

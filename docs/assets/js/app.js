@@ -2,6 +2,7 @@ const body = document.querySelector('body');
 const mode = document.querySelector('#mode');
 const config = localStorage.getItem('theme');
 const year = document.querySelector('#year');
+const topBottom = document.querySelector('.top-bottom');
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -30,4 +31,19 @@ mode.addEventListener('click', () => {
 
     localStorage.setItem('theme', themeSelected);
 
+});
+
+window.onscroll = () => {
+    if(document.documentElement.scrollTop > 50) {
+        topBottom.style.display = 'block';
+    } else {
+        topBottom.style.display = 'none';
+    }
+};
+
+topBottom.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' 
+    })
 });
