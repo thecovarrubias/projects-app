@@ -21,8 +21,8 @@ html {
 body {
     margin: 0;
     font-family: 'Lato', sans-serif;
-    background-color: var(--bg-light-primary);
     transition: 400ms;
+    background-color: var(--bg-light-primary);
 }
 
 body.dark-mode {
@@ -137,7 +137,7 @@ body.dark-mode #info > section > p {
     margin: 0 auto;
     max-width: 1000px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .card-image {
@@ -216,6 +216,7 @@ body.dark-mode .card-project {
     flex-direction: column;
     text-decoration: none;
     transition: 250ms;
+    font-weight: bold;
 }
 
 .link-contact > i {
@@ -244,7 +245,6 @@ footer {
     height: 6vh;
     background-color: var(--light-primary);
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 1em;
     color: var(--bg-light-primary);
 }
 
