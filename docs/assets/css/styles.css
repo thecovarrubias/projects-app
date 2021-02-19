@@ -16,6 +16,17 @@ html {
     scroll-behavior: smooth;
 }
 
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Regular.ttf');
+}
+
+h1, h2, h3 {
+    font-family: 'Lato', Helvetica, Arial;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
 body {
     margin: 0;
     font-family: Helvetica, Arial, sans-serif;
@@ -40,6 +51,7 @@ body.dark-mode {
     border: 1px solid var(--bg-light-primary);
     color: var(--bg-light-primary);
     animation: fade-in 500ms;
+    z-index: 1;
 }
 
 .top-bottom > i {
@@ -53,7 +65,6 @@ body.dark-mode {
 body.dark-mode .top-bottom {
     background-color: var(--dark-primary);
     border-color: var(--bg-dark-primary);
-    z-index: 1;
 }
 
 .nav {
@@ -63,27 +74,26 @@ body.dark-mode .top-bottom {
     padding: 0;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
+    margin: 0 250px;
 }
 
-.nav-item a {
-    color: var(--light-secondary);
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: .9em;
-    transition: 200ms;
+.nav-item {
+    cursor: pointer;
+    color: var(--bg-dark-primary);
+    transition: 150ms;
 }
 
-.nav-item a:hover {
+.nav-item:hover {
     color: var(--light-primary);
 }
 
-body.dark-mode .nav-item a {
+body.dark-mode .nav-item {
     color: var(--dark-secondary);
 }
 
-body.dark-mode .nav-item a:hover {
+body.dark-mode .nav-item:hover {
     color: var(--dark-primary);
 }
 
@@ -92,10 +102,11 @@ body.dark-mode .nav-item a:hover {
     display: flex;
     align-items: center;
     text-align: center;
+    margin: 0 250px;
 }
 
 .user-image {
-    border: 2.5px solid var(--light-primary);
+    border: 4px solid var(--light-primary);
     border-radius: 50%;
     height: 225px;
     width: 225px;
@@ -103,7 +114,7 @@ body.dark-mode .nav-item a:hover {
 }
 
 body.dark-mode .user-image {
-    border: 2.5px solid var(--dark-primary);
+    border: 4px solid var(--dark-primary);
     filter: brightness(.8) contrast(1.2);
 }
 
@@ -112,8 +123,19 @@ body.dark-mode .user-image {
 }
 
 #info > section > h1 {
-    font-size: 2.5em;
-    font-weight: 400;
+    font-size: 2em;
+    letter-spacing: 3px;
+    margin: 25px 0 15px;
+}
+
+#info > section > h2 {
+    font-size: 1em;
+    margin: 0 0 25px;
+    color: var(--light-primary);
+}
+
+body.dark-mode #info > section > h2 {
+    color: var(--dark-primary);
 }
 
 #info > section > p {
@@ -145,6 +167,7 @@ body.dark-mode .card-image {
     color: var(--light-secondary);
     transition: 200ms;
     margin: 10px;
+    border-radius: 5px;
 }
 
 .card-project:hover {
@@ -159,6 +182,14 @@ body.dark-mode .card-project {
     color: var(--dark-secondary);
 }
 
+.card-project hr {
+    border: 1px solid var(--light-primary);
+}
+
+body.dark-mode .card-project hr {
+    border: 1px solid var(--dark-primary);
+}
+
 .card-image {
     width: 100%;
     position: relative;
@@ -167,7 +198,8 @@ body.dark-mode .card-project {
 .card-image > img {
     width: 100%;
     display: block;
-    transition: 400ms;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .card-preview {
@@ -176,7 +208,7 @@ body.dark-mode .card-project {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: var(--light-primary);
+    background-color: rgba(246, 50, 69, .6);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -184,28 +216,41 @@ body.dark-mode .card-project {
     text-align: center;
     opacity: 0;
     color: var(--bg-light-primary);
-    animation: fade-out 300ms;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transition: 250ms;
+    -webkit-transition: 250ms;
 }
 
-body.dark-mode card-.preview {
-    background-color: var(--dark-primary);
+body.dark-mode .card-preview {
+    background-color: rgba(235, 83, 98, .6);
 }
 
 .card-preview > a {
     text-decoration: none;
     color: var(--bg-light-primary);
+    padding: 8px 25px;
+    border: 1px solid var(--bg-light-primary);
+    background-color: transparent;
+    border-radius: 5px;
+    transition: 200ms;
+}
+
+.card-preview > a:hover {
+    background-color: var(--bg-light-primary);
+    color: var(--bg-dark-primary);
 }
 
 .card-preview:hover {
     opacity: 1;
-    animation: fade-in 300ms;
 }
 
+.card-image:hover img {
+    filter: grayscale(100%) blur(2px);
+}
 
 .card-title {
-    font-weight: lighter;
-    text-align: left;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 .card-content {
@@ -221,7 +266,7 @@ body.dark-mode card-.preview {
     align-items: center;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin-top: 50px;
 }
 
@@ -235,8 +280,12 @@ body.dark-mode card-.preview {
 }
 
 .link-contact > i {
-    font-size: 1.8em;
+    font-size: 2em;
     margin-bottom: 5px;
+}
+
+.link-contact > span {
+    font-size: .9em;
 }
 
 .link-contact:hover {
@@ -258,14 +307,14 @@ footer {
     align-items: center;
     width: 100%;
     height: 6vh;
-    background-color: transparent;
-    color: var(--bg-dark-primary);
-    border-top: 1px solid var(--light-primary);
+    background-color: var(--bg-light-secondary);
+    color: #414141;
+    font-size: .9em;
 }
 
 body.dark-mode footer {
-    color: var(--dark-secondary);
-    border-top: 1px solid var(--dark-primary);
+    color: #727272;
+    background-color: var(--bg-dark-secondary);
 }
 
 @media(max-width: 1025px) {
@@ -286,6 +335,10 @@ body.dark-mode footer {
         font-size: .8em;
     }
 
+    .nav, #info {
+        margin: 0 25px;
+    }
+
 }
 
 @media(max-width: 770px) {
@@ -296,7 +349,11 @@ body.dark-mode footer {
     }
 
     #info > section > h1 {
-        font-size: 2em;
+        font-size: 1.6em;
+    }
+
+    #info > section > h2 {
+        font-size: .8em;
     }
 
     #projects {
@@ -305,9 +362,16 @@ body.dark-mode footer {
     }
 
     .link-contact > i {
-        font-size: 1.5em;
-        margin-bottom: 5px;
-    }    
+        font-size: 1.8em;
+    } 
+
+    .link-contact > span {
+        font-size: .9em;
+    }
+
+    .nav, #info {
+        margin: 0 15px;
+    }
     
 }
 
@@ -317,13 +381,19 @@ body.dark-mode footer {
     }
 
     #info > section > h1 {
-        font-size: 1.8em;
+        font-size: 1.4em;
     }
-}
 
-@media(max-width: 376px) {
-    #info > section > h1 {
-        font-size: 1.5em;
+    #info > section > h2 {
+        font-size: .8em;
+    }
+
+    .link-contact > i {
+        font-size: 1.6em;
+    } 
+
+    .nav {
+        font-size: .9em;
     }
 }
 
@@ -334,15 +404,5 @@ body.dark-mode footer {
 
     to {
         opacity: 1;
-    }
-}
-
-@keyframes fade-out {
-    from {
-        opacity: 1;
-    }
-
-    to {
-        opacity: 0;
     }
 }
