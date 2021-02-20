@@ -21,10 +21,10 @@ html {
     src: url('../fonts/Lato-Regular.ttf');
 }
 
-h1, h2, h3 {
+h1, h2, h3, .nav-item {
     font-family: 'Lato', Helvetica, Arial;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 body {
@@ -77,11 +77,13 @@ body.dark-mode .top-bottom {
     justify-content: flex-end;
     align-items: center;
     margin: 0 250px;
+    font-size: .9em;
 }
 
 .nav-item {
     cursor: pointer;
     color: var(--bg-dark-primary);
+    font-weight: bold;
     transition: 150ms;
 }
 
@@ -115,11 +117,15 @@ body.dark-mode .nav-item:hover {
 
 body.dark-mode .user-image {
     border: 4px solid var(--dark-primary);
+}
+
+body.dark-mode img {
     filter: brightness(.8) contrast(1.2);
 }
 
 #info > section {
     width: 100%;
+    position: relative;
 }
 
 #info > section > h1 {
@@ -129,7 +135,7 @@ body.dark-mode .user-image {
 }
 
 #info > section > h2 {
-    font-size: 1em;
+    font-size: 1.2em;
     margin: 0 0 25px;
     color: var(--light-primary);
 }
@@ -223,7 +229,7 @@ body.dark-mode .card-project hr {
 }
 
 body.dark-mode .card-preview {
-    background-color: rgba(235, 83, 98, .6);
+    background-color: rgba(32, 32, 32, .6);
 }
 
 .card-preview > a {
@@ -246,7 +252,7 @@ body.dark-mode .card-preview {
 }
 
 .card-image:hover img {
-    filter: grayscale(100%) blur(2px);
+    filter: grayscale(100%);
 }
 
 .card-title {
@@ -307,13 +313,13 @@ footer {
     align-items: center;
     width: 100%;
     height: 6vh;
-    background-color: var(--bg-light-secondary);
+    background-color: #ededed;
     color: #414141;
     font-size: .9em;
 }
 
 body.dark-mode footer {
-    color: #727272;
+    color: var(--dark-secondary);
     background-color: var(--bg-dark-secondary);
 }
 
@@ -353,7 +359,7 @@ body.dark-mode footer {
     }
 
     #info > section > h2 {
-        font-size: .8em;
+        font-size: 1em;
     }
 
     #projects {
@@ -372,6 +378,10 @@ body.dark-mode footer {
     .nav, #info {
         margin: 0 15px;
     }
+
+    .nav {
+        font-size: .8em;
+    }
     
 }
 
@@ -381,20 +391,16 @@ body.dark-mode footer {
     }
 
     #info > section > h1 {
-        font-size: 1.4em;
+        font-size: 1.5em;
     }
 
     #info > section > h2 {
-        font-size: .8em;
+        font-size: 1em;
     }
 
     .link-contact > i {
         font-size: 1.6em;
     } 
-
-    .nav {
-        font-size: .9em;
-    }
 }
 
 @keyframes fade-in {
