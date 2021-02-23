@@ -155,9 +155,9 @@ body.dark-mode #info > section > p {
 }
 
 #projects {
-    height: 94vh;
+    height: auto;
     align-items: center;
-    margin: 0 auto;
+    margin: 25px auto;
     max-width: 1000px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -360,11 +360,6 @@ body.dark-mode footer {
 
     #info > section > h2 {
         font-size: 1em;
-    }
-
-    #projects {
-        height: auto;
-        margin: 25px auto;
     }
 
     .link-contact > i {
