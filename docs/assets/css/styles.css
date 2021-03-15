@@ -12,6 +12,11 @@
     --bg-dark-secondary: #282828;
 }
 
+@font-face {
+    font-family: 'Consolas';
+    src: url('../fonts/consolas.TTF');
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -57,7 +62,7 @@ body.dark-mode .top-bottom {
 }
 
 h1, h2, h3, .nav-item {
-    font-family: Consolas, Helvetica, Arial;
+    font-family: 'Consolas', Helvetica, Arial;
     text-transform: uppercase;
     font-weight: lighter;
     letter-spacing: 1px;
@@ -261,7 +266,7 @@ body.dark-mode .card-link {
 }
 
 .card-footer {
-    font-family: Consolas, Helvetica, Arial;
+    font-family: 'Consolas', Helvetica, Arial;
     padding: 0 20px 30px;
 }
 
@@ -299,7 +304,7 @@ body.dark-mode .card-link {
 
 .link-contact > span {
     font-size: .9em;
-    font-family: Consolas, Helvetica, Arial;
+    font-family: 'Consolas', Helvetica, Arial;
 }
 
 .link-contact:hover {
@@ -461,6 +466,9 @@ body.dark-mode .lds-ring div {
         grid-template-columns: repeat(1, 1fr);
     }
     
+    .card-content > p {
+        font-size: 1em;
+    }
 }
 
 @media(max-width: 426px) {
