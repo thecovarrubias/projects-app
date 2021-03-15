@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>José Covarrubias - Frontend Developer</title>
     <meta name="description"
-        content="I’m Frontend Developer with more than one year of experience, interested in learning new technologies, in addition to contributing new and innovative ideas.">
-    <meta name="keywords" content="developer, frontend developer, innovative ideas, technology">
+        content="Desarrollador con más de un año de experiencia, interesado en aprender nuevas tecnologías, aportar ideas nuevas e innovadoras.">
+    <meta name="keywords" content="developer, frontend developer, innovative ideas, technology, desarrollador, desarrollador frontend, ideas innovadoras, tecnología">
     <meta name="author" content="Jose Covarrubias">
-    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -18,13 +17,19 @@
 
 <body>
 
+    <div class="loader">
+        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+    </div>
+
     <span class="top-bottom">
         <i class="fas fa-angle-up"></i>
     </span>
 
     <nav>
         <ul class="nav">
-            <li class="nav-item" id="mode"></li>
+            <li class="nav-item"><a href="#projects">Proyectos</a></li>
+            <li class="nav-item"><a href="#contact">Contacto</a></li>
+            <li class="nav-item btn-mode" id="mode"></li>
         </ul>
     </nav>
 
@@ -33,37 +38,22 @@
         <section>
             <img class="user-image" src="assets/img/68752582_2407937512817951_8711137963502731264_n.jpg" alt="img">
             <h1>Jose Covarrubias</h1>
-            <h2>Desarrollador Frontend</h2>
+            <h2>Desarrollador Frontend 👨🏻‍💻</h2>
             <p>Desarrollador con más de un año de experiencia, interesado en aprender nuevas
                 tecnologías, aportar ideas nuevas e innovadoras.</p>
-
-            <div id="contact">
-                <a href="https://github.com/thecovarrubias" rel="noopener" target="_blank" class="link-contact">
-                    <i class="fab fa-github"></i>
-                    <span>GitHub</span>
-                </a>
-                <a href="https://www.linkedin.com/in/jose-covarrubias-pulido/" rel="noopener" target="_blank"
-                    class="link-contact">
-                    <i class="fab fa-linkedin"></i>
-                    <span>LinkedIn</span>
-                </a>
-                <a href="mailto:thcovarrubias@gmail.com" class="link-contact">
-                    <i class="fas fa-at"></i>
-                    <span>Email</span>
-                </a>
-            </div>
         </section>
     </main>
 
     <section id="projects">
 
         <article class="card-project">
-            <div class="card-image">
-                <img src="assets/img/smartmockups_kl72i4fb.jpg" alt="card">
-                <div class="card-preview">
-                    <p>Tecnologías utilizadas: React JS, Bootstrap, Firebase y Git.</p>
-                    <a href="https://logistics-2020.web.app/" rel="noopener" target="_blank">
-                        <i class="fas fa-link"></i> Preview
+            <div class="card-header">
+                <div class="card-icon">
+                    <i class="far fa-folder"></i>
+                </div>
+                <div class="card-links">
+                    <a href="https://logistics-2020.web.app/" rel="noopener" target="_blank" class="card-link">
+                        <i class="fas fa-external-link-alt"></i>
                     </a>
                 </div>
             </div>
@@ -76,17 +66,31 @@
                     convertir a los visitantes en clientes potenciales.
                 </p>
             </div>
+            <div class="card-footer">
+                <ul>
+                    <li>React JS</li>
+                    <li>Bootstrap</li>
+                    <li>Firebase</li>
+                    <li>Git</li>
+                </ul>
+            </div>
         </article>
 
         <article class="card-project">
-            <div class="card-image">
-                <img src="assets/img/smartmockups_kl72gggx.jpg" alt="Ofrenda con CSS" class="card-image">
-                <div class="card-preview">
-                    <p>Tecnologías utilizadas: HTML5, CSS3 y Git.</p>
-                    <a href="https://thecovarrubias.github.io/ofrenda-con-css/" rel="noopener" target="_blank">
-                        <i class="fas fa-link"></i> Preview
+            <div class="card-header">
+                <div class="card-icon">
+                    <i class="far fa-folder"></i>
+                </div>
+                <div class="card-links">
+                    <a href="https://github.com/thecovarrubias/ofrenda-con-css" rel="noopener" target="_blank"
+                        class="card-link">
+                        <i class="fab fa-github"></i>
                     </a>
-                </div>    
+                    <a href="https://thecovarrubias.github.io/ofrenda-con-css/" rel="noopener" target="_blank"
+                        class="card-link">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
             </div>
             <div class="card-content">
                 <h3 class="card-title">Ofrenda con CSS</h3>
@@ -94,25 +98,86 @@
                 <p>El día de muertos es una tradición que es reconocida mundialmente y de la cual una parte muy
                     importante son las ofrendas, tomando este elemento se realizó el reto.</p>
             </div>
+            <div class="card-footer">
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>Git</li>
+                </ul>
+            </div>
         </article>
 
         <article class="card-project">
-            <div class="card-image">
-                <img src="assets/img/smartmockups_klha8z2o.jpg" alt="Ofrenda con CSS" class="card-image">
-                <div class="card-preview">
-                    <p>Tecnologías utilizadas: React JS, Bootstrap y Git.</p>
-                    <a href="https://thecovarrubias.github.io/gif-expert-app/" rel="noopener" target="_blank">
-                        <i class="fas fa-link"></i> Preview
+            <div class="card-header">
+                <div class="card-icon">
+                    <i class="far fa-folder"></i>
+                </div>
+                <div class="card-links">
+                    <a href="https://github.com/thecovarrubias/gif-expert-app" rel="noopener" target="_blank"
+                        class="card-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://thecovarrubias.github.io/gif-expert-app/" rel="noopener" target="_blank"
+                        class="card-link">
+                        <i class="fas fa-external-link-alt"></i>
                     </a>
                 </div>
             </div>
             <div class="card-content">
                 <h3 class="card-title">GIF Expert App</h3>
                 <hr>
-                <p>Una pequeña aplicación hecha en React con Hooks para buscar y mostrar GIFs animados. Del curso "React: De cero a experto (Hooks y MERN)" por Fernando Herrera.</p>
+                <p>Una pequeña aplicación hecha en React con Hooks para buscar y mostrar GIFs animados. Del curso
+                    "React: De cero a experto (Hooks y MERN)" por Fernando Herrera.</p>
+            </div>
+            <div class="card-footer">
+                <ul>
+                    <li>React JS</li>
+                    <li>Bootstrap</li>
+                    <li>Git</li>
+                </ul>
             </div>
         </article>
 
+        <article class="card-project">
+            <div class="card-header">
+                <div class="card-icon">
+                    <i class="far fa-folder"></i>
+                </div>
+                <div class="card-links">
+                    <a href="https://festerimpersol.com/" rel="noopener" target="_blank" class="card-link">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">Fester Impersol</h3>
+                <hr>
+                <p>Fester, empresa líder del mercado en impermeabilizantes y adhesivos para concreto, comparte su
+                    historia desde sus inicios hasta la actualidad.</p>
+            </div>
+            <div class="card-footer">
+                <ul>
+                    <li>Bootstrap</li>
+                    <li>CSS3</li>
+                </ul>
+            </div>
+        </article>
+    </section>
+
+    <section id="contact">
+        <a href="https://github.com/thecovarrubias" rel="noopener" target="_blank" class="link-contact">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/jose-covarrubias-pulido/" rel="noopener" target="_blank"
+            class="link-contact">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+        </a>
+        <a href="mailto:thcovarrubias@gmail.com" class="link-contact">
+            <i class="fas fa-at"></i>
+            <span>Email</span>
+        </a>
     </section>
 
     <footer>
