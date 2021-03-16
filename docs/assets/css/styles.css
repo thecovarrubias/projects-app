@@ -68,6 +68,7 @@ h1, h2, h3, .nav-item {
     letter-spacing: 1px;
 }
 
+/* Header */
 .nav {
     height: 10vh;
     list-style-type: none;
@@ -118,12 +119,14 @@ body.dark-mode .btn-mode {
 body.dark-mode .btn-mode:hover {
     color: var(--dark-secondary);
 }
+/* End - Header */
 
+/* Content */
 #info {
     display: flex;
     align-items: center;
     text-align: center;
-    margin: 150px 250px;
+    margin: 220px 250px;
 }
 
 .user-image {
@@ -144,32 +147,40 @@ body.dark-mode img {
 
 #info > section {
     width: 100%;
-    position: relative;
+    display: flex;
+    flex-direction: row;
 }
 
-#info > section > h1 {
-    font-size: 2.2em;
+.info-user, .image {
+    width: 50%;
+}
+
+.info-user > h1 {
+    font-size: 2.3em;
     letter-spacing: 2.3px;
-    margin: 25px 0 15px;
+    margin: 25px 0 25px;
 }
 
-#info > section > h2 {
+.info-user > h2 {
     font-size: 1.3em;
-    margin: 0 0 25px;
-    color: var(--light-primary);
+    color: var(--bg-light-primary);
+    background-color: var(--light-primary);
+    border-radius: 5px;
+    padding: 10px 0;
 }
 
-body.dark-mode #info > section > h2 {
-    color: var(--dark-primary);
+.info-user > p {
+    margin: 30px 10px 0;
+    line-height: 2em;
 }
 
-#info > section > p {
-    margin: 10px;
-    line-height: 1.5em;
+body.dark-mode .info-user > h2 {
+    color: var(--bg-light-secondary);
+    background-color: var(--dark-primary);
 }
 
-body.dark-mode #info > section > h1, 
-body.dark-mode #info > section > p {
+body.dark-mode .info-user > h1, 
+body.dark-mode .info-user > p {
     color: var(--dark-secondary);
 }
 
@@ -263,6 +274,7 @@ body.dark-mode .card-link {
 
 .card-content > p {
     text-align: justify;
+    font-size: 1em;
 }
 
 .card-footer {
@@ -318,6 +330,7 @@ body.dark-mode .link-contact {
 body.dark-mode .link-contact:hover {
     color: var(--dark-primary);
 }
+/* End - Content */
 
 footer {
     bottom: 0;
@@ -418,7 +431,7 @@ body.dark-mode .lds-ring div {
     }
 
     #info {
-        margin: 180px 25px;
+        margin: 200px 25px;
     }
 
     .nav, #contact {
@@ -434,12 +447,29 @@ body.dark-mode .lds-ring div {
         width: 170px;
     }
 
-    #info > section > h1 {
-        font-size: 1.6em;
+    #info {
+        margin: 180px 15px;
     }
 
-    #info > section > h2 {
-        font-size: 1em;
+    .info-user {
+        width: 60%;
+    }
+
+    .image {
+        width: 40%;
+    }
+
+    .info-user > h1 {
+        font-size: 1.6em;
+    }
+    
+    .info-user > h2 {
+        font-size: 1.2em;
+    }
+    
+    .info-user > p {
+        margin: 20px 10px 0;
+        line-height: 1.5em;
     }
 
     .link-contact > i {
@@ -454,10 +484,6 @@ body.dark-mode .lds-ring div {
         margin: 0 15px;
     }
 
-    #info {
-        margin: 125px 15px;
-    }
-
     .nav {
         font-size: .9em;
     }
@@ -465,39 +491,32 @@ body.dark-mode .lds-ring div {
     #projects {
         grid-template-columns: repeat(1, 1fr);
     }
-    
-    .card-content > p {
-        font-size: 1em;
-    }
 }
 
-@media(max-width: 426px) {
+@media(max-width: 550px) {
 
-    #info > section > h1 {
-        font-size: 1.5em;
+    #info {
+        margin: 80px 15px;
     }
 
-    #info > section > h2 {
-        font-size: 1em;
+    #info > section {
+        flex-direction: column-reverse;
+    }
+
+    .info-user, .image {
+        width: 100%;
     }
 
     .link-contact > i {
         font-size: 1.6em;
     } 
 
-    #info {
-        margin: 100px 15px;
-    }
 }
 
 @media(max-width: 320px) {
     .user-image {
         height: 150px;
         width: 150px;
-    }
-
-    #info > section > h1 {
-        font-size: 1.3em;
     }
 }
 
