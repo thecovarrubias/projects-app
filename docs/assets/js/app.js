@@ -3,7 +3,16 @@ const body = document.querySelector('body'),
       config = localStorage.getItem('theme'),
       year = document.querySelector('#year'),
       topBottom = document.querySelector('.top-bottom'),
-      loader = document.querySelector('.loader');
+      loader = document.querySelector('.loader'),
+      typed = new Typed('.typed', {
+        strings: [
+            'Ingeniero en TIC´S 👨🏻‍💻', 
+            'Desarrollador Frontend 💻'
+        ],
+        typeSpeed: 85,
+        loop: true,
+        backDelay: 2500
+      });
 
 window.addEventListener('DOMContentLoaded', () => {
     

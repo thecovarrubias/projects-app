@@ -464,7 +464,7 @@ body.dark-mode .lds-ring div {
         margin: 200px 25px;
     }
 
-    .nav, #contact {
+    .nav, .links-contact {
         justify-content: space-around;
     }
 
@@ -520,10 +520,6 @@ body.dark-mode .lds-ring div {
 
     #projects {
         grid-template-columns: repeat(1, 1fr);
-    }
-
-    .links-contact {
-        justify-content: space-around;
     }
 }
 
