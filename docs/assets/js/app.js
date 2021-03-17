@@ -3,6 +3,9 @@ const body = document.querySelector('body'),
       config = localStorage.getItem('theme'),
       year = document.querySelector('#year'),
       topBottom = document.querySelector('.top-bottom'),
+      modalContainer = document.querySelector('#modal-container'); 
+      modalOpen = document.querySelector('#modal-open');
+      modalClose = document.querySelector('#modal-close');
       loader = document.querySelector('.loader'),
       typed = new Typed('.typed', {
         strings: [
@@ -13,6 +16,14 @@ const body = document.querySelector('body'),
         loop: true,
         backDelay: 2500
       });
+
+modalOpen.addEventListener('click', () => {
+    modalContainer.classList.add('show');
+});
+
+modalClose.addEventListener('click', () => {
+    modalContainer.classList.remove('show');
+});
 
 window.addEventListener('DOMContentLoaded', () => {
     

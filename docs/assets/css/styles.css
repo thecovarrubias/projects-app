@@ -14,7 +14,8 @@
 
 @font-face {
     font-family: 'Consolas';
-    src: url('../fonts/consolas.TTF');
+    src: local('Consolas'), local('Consolas'), url('../fonts/consolas.TTF'), format('ttf');
+    font-display: swap;
 }
 
 html {
@@ -135,6 +136,7 @@ body.dark-mode .btn-mode:hover {
     height: 225px;
     width: 225px;
     padding: 5px;
+    cursor: pointer;
 }
 
 body.dark-mode .user-image {
@@ -261,6 +263,7 @@ body.dark-mode .card-icon {
     transition: 250ms;
     margin-left: 15px;
     font-size: 1.4em;
+    transition: 150ms;
 }
 
 .card-link span {
@@ -270,9 +273,18 @@ body.dark-mode .card-icon {
     margin-top: 5px;
 }
 
+.card-link:hover {
+    color: var(--light-primary);
+}
+
 body.dark-mode .card-link {
     color: var(--bg-light-secondary);
 }
+
+body.dark-mode .card-link:hover {
+    color: var(--dark-primary);
+}
+
 
 .card-content {
     line-height: 1.5em;
@@ -301,21 +313,17 @@ body.dark-mode .card-link {
 #contact {
     height: 94vh;
     margin: 0 250px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .contact-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
     text-align: center;
-    height: 30%;
     line-height: 2em;
     color: var(--ligth-secondary);
-}
-
-.contact-text h3 {
-    font-size: 1.4em;
+    margin-bottom: 50px;
 }
 
 body.dark-mode .contact-text {
@@ -324,10 +332,6 @@ body.dark-mode .contact-text {
 
 .links-contact {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 70%;
 }
 
 .link-contact {
@@ -337,6 +341,7 @@ body.dark-mode .contact-text {
     flex-direction: column;
     text-decoration: none;
     transition: 250ms;
+    margin: 0 100px;
 }
 
 .link-contact > i {
@@ -437,6 +442,66 @@ body.dark-mode .lds-ring div {
     animation: fade-out 1s forwards;
 }
 
+#modal-container {
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 3;
+}
+
+#modal-container.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.modal {
+    background-color: var(--bg-light-primary);
+    color: var(--ligt-secondary);
+    width: 600px;
+    max-width: 100%;
+    padding: 25px 50px;
+    border-radius: 5px;
+    height: 500px;
+    max-height: 100%;
+    overflow-y: scroll;
+    text-align: justify;
+}
+
+body.dark-mode .modal {
+    background-color: var(--bg-dark-primary);
+    color: var(--dark-secondary);
+}
+
+.modal::-webkit-scrollbar {
+    display: none;
+}
+
+.btn-primary {
+    background-color: var(--light-primary);
+    border: none;
+    border-radius: 5px;
+    color: var(--bg-light-primary);
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    font-size: 1em;
+    font-family: 'Consolas', Helvetica, Arial;
+    text-transform: uppercase;
+}
+
+body.dark-mode .btn-primary {
+    background-color: var(--dark-primary);
+    color: var(--dark-secondary);
+}
 
 @media(max-width: 1025px) {
 
@@ -510,7 +575,7 @@ body.dark-mode .lds-ring div {
         font-size: .9em;
     }
 
-    .nav, #contact {
+    .nav {
         margin: 0 15px;
     }
 
@@ -540,6 +605,14 @@ body.dark-mode .lds-ring div {
     .link-contact > i {
         font-size: 1.6em;
     } 
+
+    .modal {
+        padding: 25px 25px;
+    }
+
+    .link-contact {
+        margin: 0 25px;
+    }
 
 }
 
@@ -579,4 +652,3 @@ body.dark-mode .lds-ring div {
         transform: rotate(360deg);
     }
 }
-  
