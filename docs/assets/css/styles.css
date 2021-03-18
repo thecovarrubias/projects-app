@@ -14,8 +14,7 @@
 
 @font-face {
     font-family: 'Consolas';
-    src: local('Consolas'), local('Consolas'), url('../fonts/consolas.TTF'), format('ttf');
-    font-display: swap;
+    src: url('../fonts/consolas.TTF');
 }
 
 html {
