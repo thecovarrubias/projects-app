@@ -14,7 +14,8 @@
 
 @font-face {
     font-family: 'Consolas';
-    src: url('../fonts/consolas.TTF');
+    font-display: block;
+    src: local('Consolas'), url('../fonts/consolas.TTF') format('truetype');
 }
 
 html {
@@ -314,8 +315,8 @@ body.dark-mode .card-link:hover {
     margin: 0 250px;
     display: flex;
     align-items: center;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .contact-text {
@@ -329,10 +330,6 @@ body.dark-mode .contact-text {
     color: var(--dark-secondary);
 }
 
-.links-contact {
-    display: flex;
-}
-
 .link-contact {
     align-items: center;
     color: var(--ligt-secondary);
@@ -340,7 +337,6 @@ body.dark-mode .contact-text {
     flex-direction: column;
     text-decoration: none;
     transition: 250ms;
-    margin: 0 100px;
 }
 
 .link-contact > i {
@@ -441,67 +437,6 @@ body.dark-mode .lds-ring div {
     animation: fade-out 1s forwards;
 }
 
-#modal-container {
-    background-color: rgba(0, 0, 0, .5);
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 3;
-}
-
-#modal-container.show {
-    pointer-events: auto;
-    opacity: 1;
-}
-
-.modal {
-    background-color: var(--bg-light-primary);
-    color: var(--ligt-secondary);
-    width: 600px;
-    max-width: 100%;
-    padding: 25px 50px;
-    border-radius: 5px;
-    height: 500px;
-    max-height: 100%;
-    overflow-y: scroll;
-    text-align: justify;
-}
-
-body.dark-mode .modal {
-    background-color: var(--bg-dark-primary);
-    color: var(--dark-secondary);
-}
-
-.modal::-webkit-scrollbar {
-    display: none;
-}
-
-.btn-primary {
-    background-color: var(--light-primary);
-    border: none;
-    border-radius: 5px;
-    color: var(--bg-light-primary);
-    cursor: pointer;
-    padding: 10px;
-    width: 100%;
-    font-size: 1em;
-    font-family: 'Consolas', Helvetica, Arial;
-    text-transform: uppercase;
-}
-
-body.dark-mode .btn-primary {
-    background-color: var(--dark-primary);
-    color: var(--dark-secondary);
-}
-
 @media(max-width: 1025px) {
 
     .card-content {
@@ -528,7 +463,7 @@ body.dark-mode .btn-primary {
         margin: 200px 25px;
     }
 
-    .nav, .links-contact {
+    .nav, #contact {
         justify-content: space-around;
     }
 
